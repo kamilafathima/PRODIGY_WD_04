@@ -1,0 +1,134 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    
+    align-items: center;
+    background-color:rgb(92, 83, 62);
+    color:white;
+}
+.Tic_Tac_Toe{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin:150px;
+    
+}
+.Tic_Tac_Toe h1{
+    padding-bottom:2px ;
+    text-decoration: underline;
+    text-underline-offset:5px;
+    text-align: center;
+}
+.gameboard{
+  margin-bottom: 40px;
+  margin-top:40px;
+  margin-left: 8px;;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(120px,1fr));
+   
+    
+}
+.XO{
+    border:2px solid white;
+    cursor:pointer;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    padding:20px;
+    font-size: 50px;
+    font-weight:500;
+    height: 120px;
+}
+.XO:nth-child(1),
+.XO:nth-child(2),
+.XO:nth-child(3){
+border-top:none;
+}
+
+.XO:nth-child(3n){
+    border-right: none;
+}
+
+.XO:nth-child(1),.XO:nth-child(4),.XO:nth-child(7){
+    border-left: none;
+}
+.XO:nth-child(7),.XO:nth-child(8),.XO:nth-child(9){
+    border-bottom: none;
+}
+/* .X{
+    padding-right:80px;
+    font-size: 20px;
+    font-weight:400;
+    
+}
+.Y{
+    
+    font-size: 20px;
+    font-weight:400;
+} */
+
+#gameinfo{
+    margin:5px;
+    text-align: center;
+    font-family:sans-serif;
+    font-weight: 500;
+}
+
+.button{
+    border:none;
+    background-color:rgb(71, 10, 100);
+    font-size: 20px;
+    font-weight:700;
+    padding: 10px 15px;
+    cursor:pointer;
+    border-radius: 5px;
+    color:white;
+    margin-top:20px;
+    
+    
+    }
+    .button:hover{
+        background-color:rgb(212, 6, 212);
+    }
+    @media screen and (max-width:600px) {
+        .gameboard{
+            grid-template-columns:repeat(3,minmax(85px,1fr));
+            position:relative;
+        }
+        .XO{
+            font-size: 50px;
+            height:85px;
+    
+        }
+        .Tic_Tac_Toe h1{
+            font-size: 30px;
+            font-weight: 100;
+            text-align: auto;
+            width:100vh
+        }
+        /* .X{
+            
+            word-wrap: wrap;
+            width:100vh
+            
+        }
+        .Y{
+            
+            word-wrap: wrap;
+            
+        }
+        .table{
+             
+            display:flex;
+            align-items: center;
+            flex-wrap: wrap;
+            position: absolute;
+        } */
+        
+        
+    }
